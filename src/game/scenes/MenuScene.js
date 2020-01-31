@@ -1,5 +1,4 @@
 import * as Phaser from "phaser"
-import React from "react"
 import UI from "../ui/ui";
 import HelloWorld from "../ui/components/helloworld";
 import Button from "../ui/components/button";
