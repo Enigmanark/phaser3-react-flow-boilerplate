@@ -1,4 +1,5 @@
 import React from 'react';
+import BaseComponent from "./base_component"
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -12,24 +13,19 @@ const Text = styled.h1`
   padding-top: 250px;
   text-align: center;
 `
-class HelloWorld extends React.Component {
-    constructor(props) {
-      super(props);
-  
-      const { playerName } = props;
-  
-      this.state = {
-        playerName
-      }
-    }
-  
-    render() {
-      return (
-        <Container>
-          <Text>HELLO {this.state.playerName}</Text>
-        </Container>
-      )
+export default class HelloWorld extends BaseComponent {
+  constructor(props) {
+    super(props);
+    this.state = {
+      playerName : props.playerName
     }
   }
 
-export default HelloWorld;
+  render() {
+    return (
+      <Container>
+        <Text>HELLO {this.state.playerName}</Text>
+      </Container>
+    )
+  }
+}

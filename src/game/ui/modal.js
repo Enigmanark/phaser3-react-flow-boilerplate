@@ -11,8 +11,10 @@ const Container = styled.div`
 
 // data has these properties, id, content, state, and initialProps 
 function Modal({ data }) {
-  const { Component, initialProps, state } = data;
-
+  let id = data.id;
+  let Component = data.Component;
+  let initialProps = data.InitialProps;
+  let state = data.state;
   return (
     <Container>
       <Component {...initialProps} sm={state} />

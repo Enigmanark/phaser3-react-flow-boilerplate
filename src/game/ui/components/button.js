@@ -2,6 +2,7 @@
 
 import styled from "styled-components";
 import React from "react";
+import BaseComponent from "./base_component"
 
 const Container = styled.div`
     width: 100%;
@@ -13,12 +14,9 @@ const ButtonC = styled.button`
     margin-left: 46%;
 `;
 
-export default class Button extends React.Component {
+export default class Button extends BaseComponent {
     constructor(props) {
         super(props);
-    
-        this.sm = props.sm;
-    
         this.clicked = this.clicked.bind(this)
     }
 
@@ -31,7 +29,6 @@ export default class Button extends React.Component {
     }
 
     clicked() {
-        console.log("Clicked");
         this.sm.emit('startGame');
     }
 }

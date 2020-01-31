@@ -12,12 +12,15 @@ export default class MenuScene extends Phaser.Scene {
     create() {
         this.helloWorld = UI.toggleModal( {
             id: "HelloWorld",
-            Component: HelloWorld
+            Component: HelloWorld,
+            InitialProps: {
+                playerName : "PlayerName"
+            }
         });
 
         this.button = UI.toggleModal( {
             id: "Button",
-            Component: Button 
+            Component: Button,
         });
 
         this.button.on("startGame", () => {
