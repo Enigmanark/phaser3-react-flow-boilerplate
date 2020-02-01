@@ -6,6 +6,7 @@ export default class PlayScene extends Phaser.Scene {
     }
 
     create() {
-        console.log("started");
+        this.sprite = this.add.sprite(0, 0, "Sprite");
+        this.sprite.setOrigin(0, 0);
     }
 }
